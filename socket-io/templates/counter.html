@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-time Counter</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js"></script>
+</head>
+<body>
+    <h1>Real-time Counter</h1>
+    <div id="counter"></div>
+
+    <script>
+        var socket = io.connect('http://' + document.domain + ':' + location.port + '/counter');
+
+        socket.on('counter_update', function(data) {
+            document.getElementById('counter').innerHTML = 'Counter: ' + data.count;
+        });
+    </script>
+</body>
+</html>

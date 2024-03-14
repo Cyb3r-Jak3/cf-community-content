@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "flask-socket-io"
+version = "0.1.0"
+description = "Test for 627494 on CF commuunity"
+authors = ["Cyb3r-Jak3 <git@Cyberjake.xyz>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Flask = "^3.0.2"
+Flask-SocketIO = "^5.3.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
